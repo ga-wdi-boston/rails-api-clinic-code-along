@@ -23,3 +23,18 @@ curl --include --request POST http://localhost:4741/doctors \
       "gender": "'"${G}"'"
     }
   }'
+
+FAMILYNAME='Windu'
+GNAME='Mace'
+SPEC='Coolest Lightsaber'
+G='m'
+curl --include --request POST http://localhost:4741/doctors \
+  --header "Content-Type: application/json" \
+  --data '{
+    "doctor": {
+      "family_name": "'"${FAMILYNAME}"'",
+      "given_name": "'"${GNAME}"'",
+      "specialty": "'"${SPEC}"'",
+      "gender": "'"${G}"'"
+    }
+  }'
